@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Totally Trivial Triva</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- This button will start the game -->
+  <button class="startGame">Click Here to start the Game!</button>
+
+  <!--This will hold the rest of the game, will be hidden until button is clicked -->
+  
+  <div class="container">
+    <h1 class = 'header'>San Francisco Style Trivia</h1>
+
+    <!-- Timer -->
+    <div class="timer" id='time-div'></div>
+
+    <!-- Div for quesitons -->
+    <div class="form" id = 'questions-div'></div>
+  </div>
+
+  <!--Submit Button -->
+    <button id='submitButton'>Submit</button>
+
+  <!-- When time runs out this will be displayed -->
+  <div id='timeUp' id='timeup-div'></div>
+
+  <!-- This will display the results -->
+  <div class="results"></div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+ 
+  </body>
+  </html>
