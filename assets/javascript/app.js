@@ -54,7 +54,7 @@ function countDown(){
 //Clear the interval counter
 function stop(){
   clearInterval(counter);
-}
+};
 
 //This function creates the quiz form
 function formTemplate(data){
@@ -80,7 +80,7 @@ function quiz(){
   $('#questions-div').append(questionHTML);
 }
 
-//Correct function
+//Correct function checks if answer selected matches id
 function isCorrect(question){
   var answers = $('[name='+question.id+']');
   var correct = answers.eq(question.answer);
@@ -129,12 +129,12 @@ function checkAnswers(){
   $('.results').html('correct: ' +correct + "<br>" + 'incorrect: ' + incorrect + "<br>" + 'unaswered: ' + unAnswered);
 }
 
-//Function to check if answers were clicked
+//Function to check if answers were clicked not sure what is going wrong
 function checkAnswered(question){
   var anyAnswered = false;
-  var answers = $('[name'+question.id+']');
-  for (var i=0; i <answers.length; i++){
-    if (answers[i].checked){
+  var answered = $('[name'+question.id+']');
+  for (var i=0; i <answered.length; i++){
+    if (answered[i].checked){
       anyAnswered=true;
     }
   }
@@ -143,7 +143,6 @@ function checkAnswered(question){
 
 //WHen player clicks submit it checks answers and stops game
 $('#submitButton').on('click', function(){
-  
   checkAnswers();
   stop();
   $('#time-div').append("Game Over!");
@@ -152,3 +151,8 @@ $('#submitButton').on('click', function(){
 })
 
 });
+
+
+//ISSUES
+//Will not correctly display incorrect and unanswered
+//Will not reset numbers when click to start game
